@@ -1,1 +1,3 @@
-export default function Privacy(){return <main className="container"><div className="card"><h1>سياسة الخصوصية</h1><p>نحترم خصوصية المستخدمين ونستخدم البيانات فقط لتقديم خدمة إنشاء وحفظ السير الذاتية وتحسين تجربة المستخدم.</p><p>لا يتم بيع بيانات المستخدمين لأي طرف ثالث.</p></div></main>}
+'use client'
+import {useEffect,useState} from 'react'
+export default function Saved(){const [cv,setCv]=useState<any>(null);useEffect(()=>{const x=localStorage.getItem('rawaj-cv');if(x)setCv(JSON.parse(x))},[]);return <main className="container"><h1>القوالب المحفوظة</h1>{cv?<div className="card"><h2>{cv.name}</h2><p>{cv.job}</p><a className="btn" href="/templates/editor">فتح للتعديل</a></div>:<div className="card">لا توجد سير محفوظة بعد.</div>}</main>}
