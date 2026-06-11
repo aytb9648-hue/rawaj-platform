@@ -1,3 +1,2 @@
-'use client'
-import {useEffect,useState} from 'react'
-export default function Saved(){const [cv,setCv]=useState<any>(null);useEffect(()=>{const x=localStorage.getItem('rawaj-cv');if(x)setCv(JSON.parse(x))},[]);return <main className="container"><h1>القوالب المحفوظة</h1>{cv?<div className="card"><h2>{cv.name}</h2><p>{cv.job}</p><a className="btn" href="/templates/editor">فتح للتعديل</a></div>:<div className="card">لا توجد سير محفوظة بعد.</div>}</main>}
+const templates=[['القالب التنفيذي','تصميم رسمي فاخر'],['القالب الحديث','تصميم عصري بسيط'],['القالب الإبداعي','مناسب للمصممين والمبدعين']]
+export default function Templates(){return <main className="container"><h1>قوالب السير الذاتية</h1><p>اختر قالبًا وابدأ التعديل.</p><div className="grid">{templates.map((t,i)=><div className="card template" key={t[0]}><div className="preview"><h2>CV Template</h2><p>Name / Job Title</p><hr/><p>Experience</p><p>Skills</p></div><h3>{t[0]}</h3><p>{t[1]}</p><a className="btn" href={`/templates/editor?template=${i+1}`}>تعديل القالب</a></div>)}</div></main>}
