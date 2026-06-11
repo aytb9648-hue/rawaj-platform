@@ -7,7 +7,9 @@ export default function Home() {
         <p>منصة إنشاء السيرة الذاتية الاحترافية والقوالب الجاهزة</p>
 
         <a href="#templates" className="btn-primary">
-          ابدأ إنشاء سيرتك الآن
+      <a href="/builder" className="btn">
+  ابدأ إنشاء سيرتك الآن
+</a>
         </a>
       </section>
 
