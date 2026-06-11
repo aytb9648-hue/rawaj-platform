@@ -1,0 +1,1 @@
+export default function Contact(){return <main className="container"><div className="card"><h1>تواصل معنا</h1><p>راسلنا عبر البريد أو واتساب دون إظهار الرقم في الصفحة.</p><p>البريد: rwaj734@gmail.com</p><a className="btn" href="https://wa.me/966544873310">فتح واتساب</a></div></main>}
